@@ -12,7 +12,7 @@ if criar == True:
     border=2,)
     qrcode.add_data(data)
     qrcode.make(fit=True)
-    img = qrcode.make_image(fill='black', back_color='white')
-    salva = st.button('Baixar QrCode')
-    if salva == True:
-        img.save("qrcode.png")
+    qr = qrcode.make_image(fill='black', back_color='white')
+    qr.save("qrcode.png")
+    save = "qrcode.png"
+    st.download_button("Baixar QR Code",save,"qrcode.png")
