@@ -15,4 +15,4 @@ if criar == True:
     qr = qrcode.make_image(fill='black', back_color='white')
     qr.save("qrcode.png")
     save = "qrcode.png"
-    st.download_button("Baixar QR Code",save,"qrcode.png")
+    st.image(save)
